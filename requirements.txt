@@ -1,0 +1,4 @@
+pandas>=2.1
+numpy
+scikit-learn>=1.4
+requests

@@ -23,7 +23,7 @@ import features as F
 
 pm = pd.read_pickle(C.PROC / "pm25_hourly_qc.pkl")
 daily = pd.read_pickle(C.PROC / "pm25_daily.pkl")
-sites = pd.read_csv(C.RAW / "sites.csv")
+sites = pd.read_csv(C.PROC / "sites.csv")
 wx = pd.read_csv(C.RAW / "weather_hourly.csv", parse_dates=["time"])
 X = F.build_forecast_table(pm, wx, daily, sites)
 X.to_pickle(C.PROC / "forecast_table.pkl")

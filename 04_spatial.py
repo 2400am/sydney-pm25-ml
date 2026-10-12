@@ -17,7 +17,7 @@ import evaluation as E
 from features import haversine_km
 
 daily = pd.read_pickle(C.PROC / "pm25_daily.pkl")
-sites = pd.read_csv(C.RAW / "sites.csv").set_index("site_id")
+sites = pd.read_csv(C.PROC / "sites.csv").set_index("site_id")
 wx = pd.read_csv(C.RAW / "weather_hourly.csv", parse_dates=["time"])
 wx["date"] = wx.time.dt.normalize()
 wxd = wx.groupby(["site_id", "date"])[["temperature_2m", "relative_humidity_2m", "wind_speed_10m",

@@ -29,6 +29,8 @@ FORECAST_CUTOFF_HOUR = 16          # forecast issued 16:00 AEST on day D using h
 WHO_24H = 15.0                     # WHO 2021 24-h PM2.5 guideline (ug/m3)
 NEPM_24H = 25.0                    # Australian NEPM standard, reported as a secondary threshold
 MIN_HOURS_PER_DAY = 18             # 75% completeness rule for a valid daily mean
+MIN_VALID_DAYS = 365               # drop stations with less than a year of valid days
+MAX_PLAUSIBLE_HOURLY = 1500        # ug/m3; bushfire smoke can exceed 1000 for an hour, instruments rarely beyond this
 
 # ---- Spatial unit ----------------------------------------------------------
 GRID_KM = 1.0                      # prediction surface: 1 km grid cells (point prediction at cell centre)
